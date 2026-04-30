@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+     <link rel="icon" href="/movie/media/transparent_duflix.png">
+    <link rel="stylesheet" href="/auth/registery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="login-page" id="loginPage">
+    <div class="login-box" id="loginBox">
+      <% if (success && success.length) { %>
+      <div class="flash" id="flashMsg">
+        <p class="good-msg" id="goodMsg"><%= success[0] %></p>
+      </div>
+      <% } %>
+
+      <form action="/login" method="post" class="login-form" id="loginForm">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter Username:"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email:"
+          required
+        />
+        <label for="password">Password:</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="Enter Password:"
+          required
+        />
+        <button id="loginBtn" type="submit">Submit</button>
+      </form>
+      <p>Don't have an account? <a href="/signup">signup</a></p>
+      <div class="status-msg-box">
+        <% if(error && error.length){ %>
+        <div class="bad-msg-container">
+          <p class="bad-msg"><%= error[0]%></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+
+    <script src="/auth/registery.js"></script>
+  </body>
+</html>

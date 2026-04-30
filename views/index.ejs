@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="icon" href="/movie/media/transparent_duflix.png" />
+    <link rel="stylesheet" href="/movie/movieHome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="homePage">
+    <nav class="movie-navbar" id="movieNavbar">
+      <div class="nav-contents">
+        <a href="/" class="logo-link">
+          <img
+            src="/movie/media/duflix.png"
+            alt="movie logo"
+            class="movie-logo"
+          />
+        </a>
+      </div>
+
+            <% if (success && success.length) { %>      
+      <div class="flash flash-success" id="flashMsg">
+               
+        <p class="good-msg" id="msg"><%= success[0] %></p>
+             
+      </div>
+            <% } %>
+
+      <div class="right-nav">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Browse</a></li>
+          <li><a href="#">Favourites</a></li>
+          <li><a href="/aboutPage">About</a></li>
+          <li>
+            <form action="/logout" method="post">
+              <button class="logout-btn" type="submit">logout</button>
+            </form>
+          </li>
+        </ul>
+
+        <div class="search-movies">
+          <label for="searchInput" class="search-icon" id="searchIcon"
+            >🔍</label
+          >
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search Movie:"
+          />
+        </div>
+
+        <div class="hamburger" id="hamBurger">&#9776;</div>
+      </div>
+    </nav>
+
+    <div class="movie-container" id="movieContainer">
+      <p class="nothing-found" id="nothingFound">NO RESULTS FOUND</p>
+    </div>
+
+    <script src="/movie/movie.js"></script>
+
+    <footer class="movie-footer">
+      <p>Copyright © 2026 Chukwulozie Chidubem</p>
+    </footer>
+  </body>
+</html>

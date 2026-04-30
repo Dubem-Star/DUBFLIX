@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up page</title>
+        <link rel="icon" href="/movie/media/transparent_duflix.png">
+    <link rel="stylesheet" href="/auth/registery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="signupPage"  class="signup-page">
+    <div class="signup-box" id="signupBox">
+      <form action="/signup" method="post" class="signup-form" id="signupForm">
+        <h2>Sign Up</h2>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter Username:"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email:"
+          required
+        />
+        <label for="password">Password:</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="Enter Password:"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <p class="for-users">
+        Already have an account? <a href="/login">login</a>
+      </p>
+
+      <% if(error && error.length > 0) {%>
+      <div class="flash flash-error" id="flashMsg"><%= error[0]%></div>
+      <%}%>
+    </div>
+
+    <script src="/auth/registery.js"></script>
+  </body>
+</html>

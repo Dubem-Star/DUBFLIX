@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVIE DETAIL</title>
+    <link rel="stylesheet" href="/movie/movieDetails.css" />
+  </head>
+  <body id="detailsPage">
+    <div class="page-wrapper">
+      <nav class="movie-navbar" id="movieNavbar">
+        <div class="nav-contents">
+          <a href="/" class="logo-link">
+            <img
+              src="/movie/media/duflix.png"
+              alt="movie logo"
+              class="movie-logo"
+            />
+          </a>
+        </div>
+
+        <div class="right-nav">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Browse</a></li>
+            <li><a href="#">Favourites</a></li>
+            <li><a href="/aboutPage">About</a></li>
+            <li>
+              <form action="/logout" method="post">
+                <button class="logout-btn" type="submit">logout</button>
+              </form>
+            </li>
+          </ul>
+
+          <div class="hamburger" id="hamBurger">&#9776;</div>
+        </div>
+      </nav>
+
+      <main class="column-container" id="columnContainer">
+        <section class="movie-img">
+          <img src="" class="movie-img" id="movieImg" alt="movie cover" />
+        </section>
+
+        <section class="details-section" id="detailsSection">
+          <h3 class="movie-title" id="movieTitle"></h3>
+          <p class="movie-year" id="movieYear"></p>
+
+          <p class="movie-description" id="movieDescription"></p>
+
+          <p class="movie-genre" id="movieGenre"></p>
+          <p class="movie-duration" id="movieDuration"></p>
+          <p class="movie-rating" id="movieRating"></p>
+          <p class="movie-director" id="movieDirector"></p>
+        </section>
+      </main>
+
+      <footer class="movie-footer">
+        <p>Copyright © 2025 Chukwulozie Chidubem</p>
+      </footer>
+    </div>
+    <script src="/movie/movie.js"></script>
+  </body>
+</html>
