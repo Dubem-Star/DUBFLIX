@@ -10,6 +10,7 @@ Dubflix is a Netflix-inspired movie web application designed to showcase films i
 - Flash messages for user feedback
 - Session-based authentication
 - Responsive design
+- Search & filter functionality
 
 🛠️ Tech Stack
 
@@ -19,3 +20,9 @@ Dubflix is a Netflix-inspired movie web application designed to showcase films i
 - Templating / Rendering: EJS
 - Authentication: express-session
 - Flash Messages: connect-flash
+
+📌 Future Improvements
+
+- Video streaming integration
+- Watchlist / Favorites feature
+- Ratings & reviews system
